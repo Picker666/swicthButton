@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#checkbox {
+			display: none;
+		}
+		.switchButton {
+			width: 70px;
+			height: 30px;
+			background-color: #fff;
+			display: inline-block;
+			border: solid 1px #488ff9;
+			border-radius: 16px;
+		}
+		.switchButton:before {
+			content: '';
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			background-color: #eee;
+			border-radius: 15px;
+			position: relative;
+			left: 0;
+			transition: left 0.5s;
+		}
+		
+		#checkbox:checked + label.switchButton {
+			background-color: #488ff9;
+		}
+		#checkbox:checked + label.switchButton:before {
+			left: 40px;
+		}
+
+	</style>
+</head>
+<body>
+	<input type="checkbox" id="checkbox">
+	<label for="checkbox" class="switchButton"></label>
+</body>
+</html>
